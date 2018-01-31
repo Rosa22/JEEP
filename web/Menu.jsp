@@ -16,7 +16,7 @@
         <h1 align="center">Menu de operaciones</h1>
         <hr/>
         <p><h3 align="center"><a href="Alumnos.jsp">Alumnos</a></h3></p>
-        <p><h3 align="center"><a href="">Materias</a></h3></p>
+        <p><h3 align="center"><a href="Materias.jsp">Materias</a></h3></p>
         
         
         <hr />

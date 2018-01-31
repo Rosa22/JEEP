@@ -191,6 +191,47 @@ public class Consultasdb extends Conexiondb {
     }//Actualizar alumno
     
     
+        public static LinkedList<Materia1> getMaterias() throws SQLException{
+        Statement st1 = null;
+        ResultSet rs1 = null;
+        LinkedList<Materia1> listamateria =new LinkedList<Materia1>();
+        
+        try{ 
+                st1 = conexiones.createStatement();
+                String consulta="select id, nombre, siglas, grado from materia;";
+                rs1 = st1.executeQuery(consulta);
+                
+                while(rs1.next()){
+                Materia1 materia = new Materia1();
+                materia.setId(rs1.getInt("id"));
+                materia.setNombre(rs1.getString("nombre"));
+                materia.setSiglas(rs1.getString("siglas"));
+                materia.setGrado(rs1.getInt("grado"));
+                listamateria.add(materia);
+               
+                }//while
+        }//try
+        catch(SQLException w){
+            w.getMessage();
+        }//catch
+        finally{
+            rs1.close();
+            st1.close();
+            
+        }//finally
+        return listamateria;
+    }//tablalumnos
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 }//class
