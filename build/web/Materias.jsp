@@ -19,14 +19,13 @@
         <h1>Materias!</h1>
         <hr>
         
-        <form action="" method="post">
-            <label>Id de la materia:</label><input type="texto" name="id1" id="id1">
+        <form action="Agregarmateria" method="post">
             <label>Nombre de la materia:</label><input type="texto" name="materia1" id="materia1">
             <label>Siglas de la materia:</label><input type="texto" name="siglas1" id="siglas1">
-            <label>grado en que se imparte la materia:</label><input type="texto" name="grado1" id="grado1">
-            <p><input type="submit" name="agregaralumno" id="agregaralumno" value="Agregar"></p>
+            <label>grado:</label><input type="texto" name="grado1" id="grado1" value="0">
+            <p><input type="submit" name="agregarmateria" id="agregarmateria" value="Agregar materia"></p>
             <B><a href="Menu.jsp">Salir</a></B>      
-            <B><a href=""> Modificar datos de las materias </a></B>
+            <B><a href="ModificardatosMateria.jsp"> Modificar datos de las materias </a></B>
       
             <table border="2" align="center" cellspacing="8">
             <th align="center" valign="middle">Base de datos Materias</th>

@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author rosac
  */
-public class Actualizaralumno extends HttpServlet {
+public class Actualizarmateria extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,31 +34,31 @@ public class Actualizaralumno extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, NumberFormatException {
         response.setContentType("text/html;charset=UTF-8");
+      
+        //bloque actualizar materia
+       
+       int m1 = Integer.parseInt(request.getParameter("materiaid1"));
+       String mn1 = request.getParameter("materianombre1");
+       String ms1 = request.getParameter("materiasiglas1");
+       int mg1 = Integer.parseInt(request.getParameter("materiagrado1"));
+       
+       
+       Consultasdb conexiones = new Consultasdb();
+       
+       if(conexiones.Actualizarmateria(m1, mn1, ms1, mg1)){
+           response.sendRedirect("ModificardatosMateria.jsp");
+       }//if
+       else{
+           response.sendRedirect("Error.jsp");
+       }
+       //else
        
         
-       int n = Integer.parseInt(request.getParameter("numeroc3"));
-       String nombre = request.getParameter("alumno");
-       String calle = request.getParameter("calle");
-       int n2 = Integer.parseInt(request.getParameter("numero"));
-       String colonia = request.getParameter("colonia");
-       int n3 = Integer.parseInt(request.getParameter("cp"));
-       String correo = request.getParameter("correo");
-       String telefono = request.getParameter("telefono");
-       int n4 = Integer.parseInt(request.getParameter("grado"));
-       String grupo = request.getParameter("grupo");
-
-         Consultasdb conexiones = new Consultasdb();
-
-       if(conexiones.Actualizaralumno(n, nombre, calle, n2, colonia, n3, correo, telefono, n4, grupo)) {
-           response.sendRedirect("ModificardatosAlumnos.jsp");
-            }//if
-            else{
-                 response.sendRedirect("Error.jsp");
-             }//else      
-       
-         
-       
-    }//processRequest
+        
+        
+        
+        
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -75,7 +75,7 @@ public class Actualizaralumno extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(Actualizaralumno.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Actualizarmateria.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -93,7 +93,7 @@ public class Actualizaralumno extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(Actualizaralumno.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Actualizarmateria.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

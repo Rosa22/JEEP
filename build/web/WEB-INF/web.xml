@@ -20,6 +20,22 @@
         <servlet-name>Actualizaralumno</servlet-name>
         <servlet-class>EscuelaJavaEE.servlets.Actualizaralumno</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Agregarmateria</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Agregarmateria</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Eliminarmateria</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Eliminarmateria</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Consultarmateria</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Consultarmateria</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Actualizarmateria</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Actualizarmateria</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Validacion</servlet-name>
         <url-pattern>/Validaciones</url-pattern>
@@ -39,6 +55,22 @@
     <servlet-mapping>
         <servlet-name>Actualizaralumno</servlet-name>
         <url-pattern>/Actualizaralumno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Agregarmateria</servlet-name>
+        <url-pattern>/Agregarmateria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Eliminarmateria</servlet-name>
+        <url-pattern>/Eliminarmateria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Consultarmateria</servlet-name>
+        <url-pattern>/Consultarmateria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Actualizarmateria</servlet-name>
+        <url-pattern>/Actualizarmateria</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

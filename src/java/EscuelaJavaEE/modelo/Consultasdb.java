@@ -153,8 +153,7 @@ public class Consultasdb extends Conexiondb {
                 alumno.setTelefono(rs1.getString("telefono"));
                 alumno.setGrado(rs1.getInt("grado"));
                 alumno.setGrupo(rs1.getString("grupo"));
-                System.out.print(numerocontrol);
-                System.out.println(consulta);
+         
                 }//while
           
             
@@ -186,10 +185,14 @@ public class Consultasdb extends Conexiondb {
         catch(SQLException s){
             s.getMessage();
         }//catch
+        finally{
+            st.close();
+        }
         
         return false;
-    }//Actualizar alumno
+    }//Actualizar materia
     
+    //Bloque materias
     
         public static LinkedList<Materia1> getMaterias() throws SQLException{
         Statement st1 = null;
@@ -222,10 +225,115 @@ public class Consultasdb extends Conexiondb {
         return listamateria;
     }//tablalumnos
     
+        public boolean operacionagregarmateria(String nombre, String siglas, int grado) throws SQLException{
+            Statement st = null;
+            try{
+                st = conexiones.createStatement();
+                String agregar="insert into materia (nombre, siglas, grado)values('"+nombre+"', '"+siglas+"', '"+grado+"')";
+                st.executeUpdate(agregar);
+                return true;
+            }//try
+            catch(SQLException f){
+                f.getMessage();
+            }//catch
+            catch(NumberFormatException w){
+                w.getMessage();
+            }
+            finally{
+                st.close();
+            }//finally
+            
+            return false;
+        }//operacionagregarmateria
     
+        public boolean operacioneliminarmateria(int id) throws SQLException{
+            Statement st = null;
+            ResultSet rs = null;
+            
+            try{
+                st = conexiones.createStatement();
+                String uno = "select nombre from materia where id = '"+id+"'";
+                String dos = "delete from materia where id='"+id+"'";
+                rs = st.executeQuery(uno);
+                
+                if(rs.next()){
+                    st.executeUpdate(dos);
+                    return true;
+                }
+
+            }//try
+            catch(SQLException d){
+                d.getMessage();
+            }//catch
+            catch(NumberFormatException d){
+                d.getMessage();
+            }
+            
+            finally{
+                rs.close();
+                st.close();
+            }//finally
+            
+            return false;
+        }//operacioneliminarmateria
     
-    
-    
+        public static Materia1 Consultarmateria(int id) throws SQLException, NumberFormatException{
+        Statement st1 = null;
+        ResultSet rs1 = null;
+        //int n = Integer.parseInt(numerocontrol);
+        Materia1 materia = null;
+        try{
+            st1 = conexiones.createStatement();
+            String consulta="select id, nombre, siglas, grado from materia where id='"+id+"';";
+            rs1 = st1.executeQuery(consulta);
+                 
+            while(rs1.next()){    
+                materia = new Materia1();
+                materia.setId(rs1.getInt("id"));
+                materia.setNombre(rs1.getString("nombre"));
+                materia.setSiglas(rs1.getString("siglas"));
+                materia.setGrado(rs1.getInt("grado"));
+                
+                }//while
+          
+            
+        }//try//try
+        catch(SQLException q){
+            q.getMessage();
+        }//catch
+        catch(NumberFormatException g){
+            g.getMessage();
+        }
+        finally{
+            rs1.close();
+            st1.close();
+        }//finally
+        
+        return materia;
+    }//static Alumno1
+
+        public boolean Actualizarmateria (int id, String nombre, String siglas, int grado) throws SQLException{
+        Statement st = null;
+        
+        try{
+            String actualizar ="update materia set nombre = '"+nombre+"', siglas = '"+siglas+"', grado = '"+grado+"' where id = '"+id+"'";
+            st = conexiones.createStatement();
+            st.executeUpdate(actualizar);
+            return true;            
+        }//try
+        catch(SQLException s){
+            s.getMessage();
+        }//catch
+        catch(NumberFormatException w){
+            w.getMessage();
+        }
+        finally{
+            st.close();
+        }
+        
+        return false;
+    }//Actualizar materia
+        
     
     
     

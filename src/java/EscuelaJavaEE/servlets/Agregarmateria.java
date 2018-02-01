@@ -5,6 +5,7 @@
  */
 package EscuelaJavaEE.servlets;
 
+import static EscuelaJavaEE.modelo.Conexiondb.conexiones;
 import EscuelaJavaEE.modelo.Consultasdb;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author rosac
  */
-public class Actualizaralumno extends HttpServlet {
+public class Agregarmateria extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,33 +33,29 @@ public class Actualizaralumno extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException, NumberFormatException {
+            throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
-       
         
-       int n = Integer.parseInt(request.getParameter("numeroc3"));
-       String nombre = request.getParameter("alumno");
-       String calle = request.getParameter("calle");
-       int n2 = Integer.parseInt(request.getParameter("numero"));
-       String colonia = request.getParameter("colonia");
-       int n3 = Integer.parseInt(request.getParameter("cp"));
-       String correo = request.getParameter("correo");
-       String telefono = request.getParameter("telefono");
-       int n4 = Integer.parseInt(request.getParameter("grado"));
-       String grupo = request.getParameter("grupo");
-
-         Consultasdb conexiones = new Consultasdb();
-
-       if(conexiones.Actualizaralumno(n, nombre, calle, n2, colonia, n3, correo, telefono, n4, grupo)) {
-           response.sendRedirect("ModificardatosAlumnos.jsp");
-            }//if
-            else{
-                 response.sendRedirect("Error.jsp");
-             }//else      
+          //bloque materia
        
-         
+       String nm = request.getParameter("materia1");
+       String sm = request.getParameter("siglas1");
+       int gm = Integer.parseInt(request.getParameter("grado1"));
        
-    }//processRequest
+       Consultasdb conexiones = new Consultasdb();
+       
+       if(conexiones.operacionagregarmateria(nm, sm, gm)){
+           
+           response.sendRedirect("Materias.jsp");
+           
+       }
+       else{
+           response.sendRedirect("Error.jsp");
+       }
+     
+        
+        
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -75,7 +72,7 @@ public class Actualizaralumno extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(Actualizaralumno.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Agregarmateria.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -93,7 +90,7 @@ public class Actualizaralumno extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(Actualizaralumno.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Agregarmateria.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

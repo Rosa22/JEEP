@@ -7,6 +7,7 @@ package EscuelaJavaEE.servlets;
 
 import EscuelaJavaEE.modelo.Alumno1;
 import EscuelaJavaEE.modelo.Consultasdb;
+import EscuelaJavaEE.modelo.Materia1;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -38,7 +39,7 @@ public class Consultaralumno extends HttpServlet {
         int numeroc = Integer.parseInt(request.getParameter("numeroc1"));
         Consultasdb conexiones = new Consultasdb();
         Alumno1 alumno = Consultasdb.Consultaralumno(numeroc);
-        System.out.println(numeroc);
+ 
         
        if( alumno != null )
         {
@@ -49,6 +50,9 @@ public class Consultaralumno extends HttpServlet {
            PrintWriter out=response.getWriter();
            out.println("Error, no se encontro el usuario '"+numeroc+"'");
         }//else
+       
+       
+       
     }//processRequest
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

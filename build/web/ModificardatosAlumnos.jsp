@@ -25,10 +25,7 @@
         <h4>Buscar y modificar alumnos</h4>
         <label>Numero de control:</label><input type="text" name="numeroc1" id="numeroc1" value="#" >
         <input type="submit" name="consultaralumno" id="consultaralumno" value="Buscar alumno"></form>
-    
-        
-        
-        
+
         <hr />
         <p><a href="Alumnos.jsp"><input type="submit" name="salir" id="salir" value="Regresar" ></a></p>
         <hr />

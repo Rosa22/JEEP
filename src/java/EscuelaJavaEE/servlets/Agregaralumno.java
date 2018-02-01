@@ -51,11 +51,12 @@ public class Agregaralumno extends HttpServlet {
            
        if(conexiones.operacionalumnosagregar(n, nombre, calle, n2, colonia, n3, correo, telefono, n4, grupo)) {
            response.sendRedirect("Alumnos.jsp");
-            }//if
+            
+        }//if
             else{
                  response.sendRedirect("Error.jsp");
              }//else      
-         
+
        
         
     }//processRequest
