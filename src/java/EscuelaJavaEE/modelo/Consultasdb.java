@@ -223,7 +223,7 @@ public class Consultasdb extends Conexiondb {
             
         }//finally
         return listamateria;
-    }//tablalumnos
+    }//tabla
     
         public boolean operacionagregarmateria(String nombre, String siglas, int grado) throws SQLException{
             Statement st = null;
@@ -310,7 +310,7 @@ public class Consultasdb extends Conexiondb {
         }//finally
         
         return materia;
-    }//static Alumno1
+    }//static materia1
 
         public boolean Actualizarmateria (int id, String nombre, String siglas, int grado) throws SQLException{
         Statement st = null;
@@ -335,6 +335,145 @@ public class Consultasdb extends Conexiondb {
     }//Actualizar materia
         
     
+    
+    //bloque aula
+        
+        public boolean agregaraula(String nombreaula, String nombredificio) throws SQLException{
+            Statement st = null;
+             try{
+                 st = conexiones.createStatement();
+                 String agregar = "insert into aula(nombre, edificio) values('"+nombreaula+"', '"+nombredificio+"')";
+                 st.executeUpdate(agregar);
+                 return true;
+                 
+             }//try
+            catch(SQLException s){
+                s.getMessage();
+            }//
+            finally{
+                 st.close();
+             }
+            
+            return false;
+        }//agregaraula
+    
+    
+        //////
+        
+        public static Aula1 Consultaraula(int id) throws SQLException, NumberFormatException{
+        Statement st1 = null;
+        ResultSet rs1 = null;
+    
+        Aula1 aula = null;
+        try{
+            st1 = conexiones.createStatement();
+            String consulta="select id, nombre, edificio from aula where id='"+id+"';";
+            rs1 = st1.executeQuery(consulta);
+                 
+            while(rs1.next()){    
+                aula = new Aula1();
+                aula.Setid(rs1.getInt("id"));
+                aula.Setnombreaula(rs1.getString("nombre"));
+                aula.Setnombredificio(rs1.getString("edificio"));
+ 
+                }//while
+ 
+        }//try
+        catch(SQLException q){
+            q.getMessage();
+        }//catch
+        catch(NumberFormatException g){
+            g.getMessage();
+        }
+        finally{
+            rs1.close();
+            st1.close();
+        }//finally
+        
+        return aula;
+    }//static aula1
+    /////////////////////////
+        
+        
+        public static LinkedList<Aula1> getAulas() throws SQLException{
+        Statement st1 = null;
+        ResultSet rs1 = null;
+        LinkedList<Aula1> listaula =new LinkedList<Aula1>();
+        
+        try{ 
+                st1 = conexiones.createStatement();
+                String consulta="select id, nombre, edificio from aula;";
+                rs1 = st1.executeQuery(consulta);
+                
+                while(rs1.next()){
+                Aula1 aula = new Aula1();
+                aula.Setid(rs1.getInt("id"));
+                aula.Setnombreaula(rs1.getString("nombre"));
+                aula.Setnombredificio(rs1.getString("edificio"));
+                listaula.add(aula);
+               
+                }//while
+        }//try
+        catch(SQLException w){
+            w.getMessage();
+        }//catch
+        finally{
+            rs1.close();
+            st1.close();
+            
+        }//finally
+        return listaula;
+    }//tablalumnos
+    
+        
+            
+    public boolean eliminaraulas(int id) throws SQLException{
+       String c="delete from aula where id='"+id+"'";
+       String c2 ="select * from aula where id='"+id+"'";
+     
+        try(Statement st = conexiones.createStatement(); ResultSet rs = st.executeQuery(c2)) {
+           
+            if(rs.next()){
+                st.executeUpdate(c);
+                return true;
+            }//if 
+            
+           
+        }//try
+        catch(SQLException s){
+            s.getMessage();
+        }//
+        catch(NumberFormatException s){
+            s.getMessage();
+        }
+        
+        return false;
+    }//eliminaralumnos
+        
+        
+        
+    
+        public boolean Actualizaraula (int id, String nombre, String edificio) throws SQLException{
+        Statement st = null;
+        
+        try{
+            String actualizar ="update aula set nombre = '"+nombre+"', edificio = '"+edificio+"' where id = '"+id+"'";
+            st = conexiones.createStatement();
+            st.executeUpdate(actualizar);
+            return true;            
+        }//try
+        catch(SQLException s){
+            s.getMessage();
+        }//catch
+        catch(NumberFormatException w){
+            w.getMessage();
+        }
+        finally{
+            st.close();
+        }
+        
+        return false;
+    }//Actualizar aula
     
     
     
