@@ -36,6 +36,22 @@
         <servlet-name>Actualizarmateria</servlet-name>
         <servlet-class>EscuelaJavaEE.servlets.Actualizarmateria</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Agregaraula</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Agregaraula</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Consultaraula</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Consultaraula</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Eliminaraula</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Eliminaraula</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Actualizaraula</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Actualizaraula</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Validacion</servlet-name>
         <url-pattern>/Validaciones</url-pattern>
@@ -71,6 +87,22 @@
     <servlet-mapping>
         <servlet-name>Actualizarmateria</servlet-name>
         <url-pattern>/Actualizarmateria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Agregaraula</servlet-name>
+        <url-pattern>/Agregaraula</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Consultaraula</servlet-name>
+        <url-pattern>/Consultaraula</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Eliminaraula</servlet-name>
+        <url-pattern>/Eliminaraula</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Actualizaraula</servlet-name>
+        <url-pattern>/Actualizaraula</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
