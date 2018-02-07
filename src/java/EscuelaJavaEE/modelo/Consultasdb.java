@@ -667,22 +667,22 @@ public class Consultasdb extends Conexiondb {
     /////////////////////////
         
         
+    
+        
+       
         public static LinkedList<Grupo1> getGrupos() throws SQLException{
         Statement st1 = null;
         ResultSet rs1 = null;
-        LinkedList<Grupo1> listgrupos =new LinkedList<Grupo1>();
-        
+        LinkedList<Grupo1> listgrupos0 =new LinkedList<Grupo1>();
         try{ 
                 st1 = conexiones.createStatement();
                 String consulta="select id, grupo from grupo;";
                 rs1 = st1.executeQuery(consulta);
-                
                 while(rs1.next()){
-                Grupo1 grupos = new Grupo1();
-                grupos.setId(rs1.getInt("id"));
-                grupos.setGrupo(rs1.getString("grupo"));
-                listgrupos.add(grupos);
-               
+                Grupo1 gruposs = new Grupo1();
+                gruposs.setId(rs1.getInt("id"));
+                gruposs.setGrupo(rs1.getString("grupo"));
+                listgrupos0.add(gruposs);
                 }//while
         }//try
         catch(SQLException w){
@@ -691,11 +691,14 @@ public class Consultasdb extends Conexiondb {
         finally{
             rs1.close();
             st1.close();
-            
         }//finally
-        return listgrupos;
-    }//tablalumnos
+        return listgrupos0;
+    }//tablagrupos
     
+        
+        
+        
+        
         
             
     public boolean eliminargrupos(int id) throws SQLException{

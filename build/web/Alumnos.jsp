@@ -4,6 +4,12 @@
     Author     : rosac
 --%>
 
+
+<%@page import="EscuelaJavaEE.modelo.Conexiondb"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.util.Vector"%>
+<%@page import="EscuelaJavaEE.modelo.Grupo1"%>
 <%@page import="java.util.LinkedList"%>
 <%@page import="EscuelaJavaEE.modelo.Alumno1"%>
 <%@page import="EscuelaJavaEE.modelo.Consultasdb"%>
@@ -20,21 +26,38 @@
         
         <h1>Alumnos!</h1>
         <hr />
-        <form action="Agregaralumno" method="post">
-        <label>Numero de control:</label><input type="texto" name="nc1" id="nc1" value="0">
-        <label>Alumno:</label><input type="texto" name="alumno" id="alumno" value= >
-        <label>Calle:</label><input type="texto" name="calle" id="calle">
-        <label>#:</label><input type="texto" name="numero" id="numero" value="0">
-        <label>Col:</label><input type="texto" name="colonia" id="colonia">
-        <p><label>CP:</label><input type="texto" name="cp" id="cp" value="0">
-        <label>Correo:</label><input type="texto" name="correo" id="correo">
-        <label>Tel:</label><input type="texto" name="telefono" id="telefono">
-        <label>Grado:</label><input type="texto" name="grado" id="grado" value="0">
-        <label>Grupo:</label><input type="texto" name="grupo" id="grupo">
-        <p><input type="submit" name="agregaralumno" id="agregaralumno" value="Agregar"></p>
-        <B><a href="Menu.jsp">Salir</a></B>
-        <B><a href="ModificardatosAlumnos.jsp"> Modificar datos de alumnos </a></B>
-        <table border="2" align="center" cellspacing="8">
+            <form action="Agregaralumno" method="post">
+            <label>Numero de control:</label><input type="texto" name="nc1" id="nc1" value="0">
+            <label>Alumno:</label><input type="texto" name="alumno" id="alumno" value= >
+            <label>Calle:</label><input type="texto" name="calle" id="calle">
+            <label>Numero:</label><input type="texto" name="numero" id="numero" value="0">
+            <p><label>Colonia:</label><input type="texto" name="colonia" id="colonia">
+            <label>Codigo Postal:</label><input type="texto" name="cp" id="cp" value="0">
+            <label>Correo:</label><input type="texto" name="correo" id="correo">
+            <label>Tel:</label><input type="texto" name="telefono" id="telefono">
+            <p><label>Grado:</label><input type="texto" name="grado" id="grado" value="0"></p>
+            <p><label>Grupo:</label><input type="texto" name="grupo" id="grupo"></p>
+            <label>Selecciona el grupo:</label>
+            <select name="combonombre">        
+                <option value="0" selected>Seleccione</option> 
+                <%
+                Statement st = null;
+                st = Conexiondb.conexiones.createStatement();
+                ResultSet rs = st.executeQuery("select grupo from grupo");
+                Vector vec=new Vector(); 
+                    while(rs.next()){ 
+                vec.add(rs.getString("grupo")); }     
+                    for(int i=0;i<vec.size();i++){%> 
+                <option value="<%=(i+1)%>"><%=vec.get(i).toString()%></option> 
+                <%}%> 
+            </select> 
+                
+                
+            <p><input type="submit" name="agregaralumno" id="agregaralumno" value="Agregar"></p>
+        
+            <B><a href="Menu.jsp">Salir</a></B>
+            <B><a href="ModificardatosAlumnos.jsp"> Modificar datos de alumnos </a></B>
+        <table border="2" align="center" cellspacing="5">
         <th align="center" valign="middle">Base de datos Alumnos</th>
         <tr>
             <td><br>#control</br></td>
