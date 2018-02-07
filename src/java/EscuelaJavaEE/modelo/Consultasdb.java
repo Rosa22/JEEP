@@ -476,7 +476,273 @@ public class Consultasdb extends Conexiondb {
     }//Actualizar aula
     
     
+    //bloque grado
+        
+        
+       public boolean agregargrado(int grado) throws SQLException{
+            Statement st = null;
+             try{
+                 st = conexiones.createStatement();
+                 String agregar = "insert into grado(grado) values('"+grado+"')";
+                 st.executeUpdate(agregar);
+                 return true;
+                 
+             }//try
+            catch(SQLException s){
+                s.getMessage();
+            }//
+            finally{
+                 st.close();
+             }
+            
+            return false;
+        }//agregargrado
     
+    
+        //////
+        
+        public static Grado1 Consultargrado(int id) throws SQLException, NumberFormatException{
+        Statement st1 = null;
+        ResultSet rs1 = null;
+        Grado1 grados1 = null;
+        try{
+            st1 = conexiones.createStatement();
+            String consulta="select id, grado from grado where id='"+id+"';";
+            rs1 = st1.executeQuery(consulta);
+                 
+            while(rs1.next()){    
+                grados1 = new Grado1();
+                grados1.setid(rs1.getInt("id"));
+                grados1.setgrado(rs1.getInt("grado"));
+                }//while
+ 
+        }//try//try
+        catch(SQLException q){
+            q.getMessage();
+        }//catch
+        catch(NumberFormatException g){
+            g.getMessage();
+        }
+        finally{
+            rs1.close();
+            st1.close();
+        }//finally
+        
+        return grados1;
+    }//static grados1
+    /////////////////////////
+        
+        
+        public static LinkedList<Grado1> getGrados() throws SQLException{
+        Statement st1 = null;
+        ResultSet rs1 = null;
+        LinkedList<Grado1> listgrados =new LinkedList<Grado1>();
+        
+        try{ 
+                st1 = conexiones.createStatement();
+                String consulta="select id, grado from grado;";
+                rs1 = st1.executeQuery(consulta);
+                
+                while(rs1.next()){
+                Grado1 grados = new Grado1();
+                grados.setid(rs1.getInt("id"));
+                grados.setgrado(rs1.getInt("grado"));
+                listgrados.add(grados);
+               
+                }//while
+        }//try
+        catch(SQLException w){
+            w.getMessage();
+        }//catch
+        finally{
+            rs1.close();
+            st1.close();
+            
+        }//finally
+        return listgrados;
+    }//tablagrados
+    
+        
+            
+    public boolean eliminargrados(int id) throws SQLException{
+       String c="delete from grado where id='"+id+"'";
+       String c2 ="select * from grado where id='"+id+"'";
+     
+        try(Statement st = conexiones.createStatement(); ResultSet rs = st.executeQuery(c2)) {
+            if(rs.next()){
+                st.executeUpdate(c);
+                return true;
+            }//if 
+        }//try
+        catch(SQLException s){
+            s.getMessage();
+        }//
+        catch(NumberFormatException s){
+            s.getMessage();
+        }
+        
+        return false;
+    }//eliminargrado
+        
+        
+        
+    
+        public boolean Actualizargrado (int id, int grado) throws SQLException{
+        Statement st = null;
+        
+        try{
+            String actualizar ="update grado set grado = '"+grado+"' where id = '"+id+"'";
+            st = conexiones.createStatement();
+            st.executeUpdate(actualizar);
+            return true;            
+        }//try
+        catch(SQLException s){
+            s.getMessage();
+        }//catch
+        catch(NumberFormatException w){
+            w.getMessage();
+        }
+        finally{
+            st.close();
+        }
+        
+        return false;
+    }//Actualizar grado
+    
+        
+        //bloque grupo
+        
+        
+        public boolean agregargrupo(String grupo) throws SQLException{
+            Statement st = null;
+             try{
+                 st = conexiones.createStatement();
+                 String agregar = "insert into grupo(grupo) values('"+grupo+"')";
+                 st.executeUpdate(agregar);
+                 return true;
+                 
+             }//try
+            catch(SQLException s){
+                s.getMessage();
+            }//
+            finally{
+                 st.close();
+             }
+            
+            return false;
+        }//agregargrupo
+    
+    
+        //////
+        
+        public static Grupo1 Consultargrupo(int id) throws SQLException, NumberFormatException{
+        Statement st1 = null;
+        ResultSet rs1 = null;
+        Grupo1 grupos1 = null;
+        try{
+            st1 = conexiones.createStatement();
+            String consulta="select id, grupo from grupo where id='"+id+"';";
+            rs1 = st1.executeQuery(consulta);
+                 
+            while(rs1.next()){    
+                grupos1 = new Grupo1();
+                grupos1.setId(rs1.getInt("id"));
+                grupos1.setGrupo(rs1.getString("grupo"));
+                }//while
+ 
+        }//try//try
+        catch(SQLException q){
+            q.getMessage();
+        }//catch
+        catch(NumberFormatException g){
+            g.getMessage();
+        }
+        finally{
+            rs1.close();
+            st1.close();
+        }//finally
+        
+        return grupos1;
+    }//static aula1
+    /////////////////////////
+        
+        
+        public static LinkedList<Grupo1> getGrupos() throws SQLException{
+        Statement st1 = null;
+        ResultSet rs1 = null;
+        LinkedList<Grupo1> listgrupos =new LinkedList<Grupo1>();
+        
+        try{ 
+                st1 = conexiones.createStatement();
+                String consulta="select id, grupo from grupo;";
+                rs1 = st1.executeQuery(consulta);
+                
+                while(rs1.next()){
+                Grupo1 grupos = new Grupo1();
+                grupos.setId(rs1.getInt("id"));
+                grupos.setGrupo(rs1.getString("grupo"));
+                listgrupos.add(grupos);
+               
+                }//while
+        }//try
+        catch(SQLException w){
+            w.getMessage();
+        }//catch
+        finally{
+            rs1.close();
+            st1.close();
+            
+        }//finally
+        return listgrupos;
+    }//tablalumnos
+    
+        
+            
+    public boolean eliminargrupos(int id) throws SQLException{
+       String c="delete from grupo where id='"+id+"'";
+       String c2 ="select * from grupo where id='"+id+"'";
+     
+        try(Statement st = conexiones.createStatement(); ResultSet rs = st.executeQuery(c2)) {
+            if(rs.next()){
+                st.executeUpdate(c);
+                return true;
+            }//if 
+        }//try
+        catch(SQLException s){
+            s.getMessage();
+        }//
+        catch(NumberFormatException s){
+            s.getMessage();
+        }
+        return false;
+    }//eliminaralumnos
+        
+        
+        
+    
+        public boolean Actualizargrupo (int id, String grupo) throws SQLException{
+        Statement st = null;
+        
+        try{
+            String actualizar ="update grupo set grupo = '"+grupo+"' where id = '"+id+"'";
+            st = conexiones.createStatement();
+            st.executeUpdate(actualizar);
+            return true;            
+        }//try
+        catch(SQLException s){
+            s.getMessage();
+        }//catch
+        catch(NumberFormatException w){
+            w.getMessage();
+        }
+        finally{
+            st.close();
+        }
+        return false;
+    }//Actualizar aula
+    
+        
+        
     
     
     

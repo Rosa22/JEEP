@@ -18,6 +18,8 @@
         <p><h2 align="center"><a href="Alumnos.jsp">Alumnos</a></h2></p>
         <p><h2 align="center"><a href="Materias.jsp">Materias</a></h2></p>
         <p><h2 align="center"><a href="Aulas.jsp">Aula</a></h2></p>
+        <p><h2 align="center"><a href="Grados.jsp">Grado</a></h2></p>
+        <p><h2 align="center"><a href="Grupos.jsp">Grupo</a></h2></p>
         
         <hr />
         <B><a href="index.jsp">Salir</a></B>
