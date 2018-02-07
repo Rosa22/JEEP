@@ -52,6 +52,38 @@
         <servlet-name>Actualizaraula</servlet-name>
         <servlet-class>EscuelaJavaEE.servlets.Actualizaraula</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Agregargrado</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Agregargrado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Agregargrupo</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Agregargrupo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Eliminargrado</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Eliminargrado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Eliminargrupo</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Eliminargrupo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Actualizargrado</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Actualizargrado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Actualizargrupo</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Actualizargrupo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Consultargrado</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Consultargrado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Consultargrupo</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Consultargrupo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Validacion</servlet-name>
         <url-pattern>/Validaciones</url-pattern>
@@ -103,6 +135,38 @@
     <servlet-mapping>
         <servlet-name>Actualizaraula</servlet-name>
         <url-pattern>/Actualizaraula</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Agregargrado</servlet-name>
+        <url-pattern>/Agregargrado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Agregargrupo</servlet-name>
+        <url-pattern>/Agregargrupo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Eliminargrado</servlet-name>
+        <url-pattern>/Eliminargrado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Eliminargrupo</servlet-name>
+        <url-pattern>/Eliminargrupo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Actualizargrado</servlet-name>
+        <url-pattern>/Actualizargrado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Actualizargrupo</servlet-name>
+        <url-pattern>/Actualizargrupo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Consultargrado</servlet-name>
+        <url-pattern>/Consultargrado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Consultargrupo</servlet-name>
+        <url-pattern>/Consultargrupo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

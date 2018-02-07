@@ -18,7 +18,7 @@
         <hr />
         <form action="Actualizaralumno" method="post">
         </p>
-        <label>Numero de control</label><input type="texto" name="numeroc3" id="numeroc3" value="<%= alumno.getNumerocontrol() %>">
+        <label>Numero de control</label><input type="texto" name="numeroc3" id="numeroc3" value="<%= alumno.getNumerocontrol() %>" readonly="readonly">
         <label>Alumno:</label><input type="texto" name="alumno" id="alumno" value="<%= alumno.getNombre() %>" >
         <label>Calle:</label><input type="texto" name="calle" id="calle" value="<%= alumno.getCalle() %>">
         <label>#:</label><input type="texto" name="numero" id="numero" value="<%= alumno.getNumero() %>">
