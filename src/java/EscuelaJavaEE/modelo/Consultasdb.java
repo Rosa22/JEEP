@@ -46,11 +46,13 @@ public class Consultasdb extends Conexiondb {
        Statement st = null;
         try{
             st = conexiones.createStatement();
+            System.out.println("resultado del grupo:");
+            System.out.println(grupo);
             String agregardb ="insert into alumno (numerocontrol, nombre, calle, numero, colonia, cp, email, telefono, grado, grupo) values ('"+numerocontrol+"', '"+nombre+"', '"+calle+"', '"+numero+"', '"+colonia+"','"+cp+"' ,'"+correo+"', '"+telefono+"', '"+grado+"', '"+grupo+"') ";  
-            if(nombre.length() != 0 && calle.length() != 0 && colonia.length() != 0 && correo.length() != 0 && telefono.length() != 0 && grupo.length() != 0){
+           // if(nombre.length() != 0 && calle.length() != 0 && colonia.length() != 0 && correo.length() != 0 && telefono.length() != 0 && grupo.length() != 0){
                 st.executeUpdate(agregardb);
             return true;
-            }
+            //}
     
         }//try
         catch(SQLException b){
@@ -73,12 +75,13 @@ public class Consultasdb extends Conexiondb {
         LinkedList<Alumno1> listaAlumnos=new LinkedList<Alumno1>();
         
         try{ 
-                st1 = conexiones.createStatement();
-                String consulta="select numerocontrol, nombre, calle, numero, colonia, cp, email, telefono, grado, grupo from alumno;";
+                st1 = conexiones.createStatement(); 
+                String consulta="select id, numerocontrol, nombre, calle, numero, colonia, cp, email, telefono, grado, grupo from alumno order by id;";
                 rs1 = st1.executeQuery(consulta);
                 
                 while(rs1.next()){
                 Alumno1 alumno = new Alumno1();
+                alumno.setId(rs1.getInt("id"));
                 alumno.setNumerocontrol(rs1.getInt("numerocontrol"));
                 alumno.setNombre(rs1.getString("nombre"));
                 alumno.setCalle(rs1.getString("calle"));
@@ -138,11 +141,12 @@ public class Consultasdb extends Conexiondb {
         Alumno1 alumno = null;
         try{
             st1 = conexiones.createStatement();
-            String consulta="select numerocontrol, nombre, calle, numero, colonia, cp, email, telefono, grado, grupo from alumno where numerocontrol='"+numerocontrol+"';";
+            String consulta="select id, numerocontrol, nombre, calle, numero, colonia, cp, email, telefono, grado, grupo from alumno where numerocontrol='"+numerocontrol+"';";
             rs1 = st1.executeQuery(consulta);
                  
             while(rs1.next()){    
                 alumno = new Alumno1();
+                alumno.setId(rs1.getInt("id"));
                 alumno.setNumerocontrol(rs1.getInt("numerocontrol"));
                 alumno.setNombre(rs1.getString("nombre"));
                 alumno.setCalle(rs1.getString("calle"));
@@ -173,11 +177,11 @@ public class Consultasdb extends Conexiondb {
     }//static Alumno1
     
     
-    public boolean Actualizaralumno (int numerocontrol, String nombre, String calle, int numero, String colonia, int cp, String correo, String telefono, int grado, String grupo) throws SQLException{
+    public boolean Actualizaralumno (int id, int numerocontrol, String nombre, String calle, int numero, String colonia, int cp, String correo, String telefono, int grado, String grupo) throws SQLException{
         Statement st = null;
         
         try{
-            String actualizar ="update alumno set numerocontrol = '"+numerocontrol+"', nombre = '"+nombre+"', calle = '"+calle+"', numero = '"+numero+"' , colonia = '"+colonia+"', cp = '"+cp+"', email = '"+correo+"', telefono = '"+telefono+"', grado = '"+grado+"', grupo = '"+grupo+"' where numerocontrol = '"+numerocontrol+"'";
+            String actualizar ="update alumno set numerocontrol = '"+numerocontrol+"', nombre = '"+nombre+"', calle = '"+calle+"', numero = '"+numero+"' , colonia = '"+colonia+"', cp = '"+cp+"', email = '"+correo+"', telefono = '"+telefono+"', grado = '"+grado+"', grupo = '"+grupo+"' where id = '"+id+"'";
             st = conexiones.createStatement();
             st.executeUpdate(actualizar);
             return true;            

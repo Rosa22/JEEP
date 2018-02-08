@@ -40,7 +40,7 @@ public class Actualizarmateria extends HttpServlet {
        int m1 = Integer.parseInt(request.getParameter("materiaid1"));
        String mn1 = request.getParameter("materianombre1");
        String ms1 = request.getParameter("materiasiglas1");
-       int mg1 = Integer.parseInt(request.getParameter("materiagrado1"));
+       int mg1 = Integer.parseInt(request.getParameter("combogrado"));
        
        
        Consultasdb conexiones = new Consultasdb();

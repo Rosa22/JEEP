@@ -40,7 +40,7 @@ public class Agregarmateria extends HttpServlet {
        
        String nm = request.getParameter("materia1");
        String sm = request.getParameter("siglas1");
-       int gm = Integer.parseInt(request.getParameter("grado1"));
+       int gm = Integer.parseInt(request.getParameter("combogrado"));
        
        Consultasdb conexiones = new Consultasdb();
        

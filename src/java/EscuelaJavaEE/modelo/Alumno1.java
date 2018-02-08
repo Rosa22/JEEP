@@ -10,6 +10,7 @@ package EscuelaJavaEE.modelo;
  * @author rosac
  */
 public class Alumno1 {
+    private int id;
     private int numerocontrol;
     private String nombre;
     private String calle;
@@ -22,10 +23,10 @@ public class Alumno1 {
     private String grupo;
     
     public Alumno1(){
-        this(0, "","", 0, "", 0,"", "", 0, "");
+        this(0,0, "","", 0, "", 0,"", "", 0, "");
     }
     
-    public Alumno1(int numerocontrol, String nombre,String calle, int numero, String colonia, int cp, String email,String telefono, int grado, String grupo){
+    public Alumno1(int id,int numerocontrol, String nombre,String calle, int numero, String colonia, int cp, String email,String telefono, int grado, String grupo){
         this.numerocontrol = numerocontrol;
         this.nombre = nombre;
         this.calle = calle;
@@ -38,7 +39,12 @@ public class Alumno1 {
         this.grupo = grupo;
     }//constructor
 
-    
+    public int getId(){
+        return id;
+    }
+    public void setId(int id){
+        this.id=id;
+    }
     public int getNumerocontrol(){
         return numerocontrol;
     }
