@@ -42,8 +42,8 @@ public class Agregaralumno extends HttpServlet {
        int n3 = Integer.parseInt(request.getParameter("cp"));
        String correo = request.getParameter("correo");
        String telefono = request.getParameter("telefono");
-       int n4 = Integer.parseInt(request.getParameter("grado"));
-       String grupo = request.getParameter("grupo");
+       int n4 = Integer.parseInt(request.getParameter("combogrado"));
+       String grupo = request.getParameter("combonombre1");
 
          Consultasdb conexiones = new Consultasdb();
 

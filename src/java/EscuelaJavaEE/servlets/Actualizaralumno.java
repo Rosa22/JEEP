@@ -35,7 +35,7 @@ public class Actualizaralumno extends HttpServlet {
             throws ServletException, IOException, SQLException, NumberFormatException {
         response.setContentType("text/html;charset=UTF-8");
        
-        
+       int id = Integer.parseInt(request.getParameter("idc3"));
        int n = Integer.parseInt(request.getParameter("numeroc3"));
        String nombre = request.getParameter("alumno");
        String calle = request.getParameter("calle");
@@ -44,12 +44,14 @@ public class Actualizaralumno extends HttpServlet {
        int n3 = Integer.parseInt(request.getParameter("cp"));
        String correo = request.getParameter("correo");
        String telefono = request.getParameter("telefono");
-       int n4 = Integer.parseInt(request.getParameter("grado"));
-       String grupo = request.getParameter("grupo");
-
+       int n4 = Integer.parseInt(request.getParameter("combogrado"));
+       String grupo = request.getParameter("combogrup");
+       System.out.println(n4);
+       System.out.println(grupo);
+       
          Consultasdb conexiones = new Consultasdb();
 
-       if(conexiones.Actualizaralumno(n, nombre, calle, n2, colonia, n3, correo, telefono, n4, grupo)) {
+       if(conexiones.Actualizaralumno(id, n, nombre, calle, n2, colonia, n3, correo, telefono, n4, grupo)) {
            response.sendRedirect("ModificardatosAlumnos.jsp");
             }//if
             else{

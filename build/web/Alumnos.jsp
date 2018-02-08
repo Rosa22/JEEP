@@ -34,12 +34,26 @@
             <p><label>Colonia:</label><input type="texto" name="colonia" id="colonia">
             <label>Codigo Postal:</label><input type="texto" name="cp" id="cp" value="0">
             <label>Correo:</label><input type="texto" name="correo" id="correo">
-            <label>Tel:</label><input type="texto" name="telefono" id="telefono">
-            <p><label>Grado:</label><input type="texto" name="grado" id="grado" value="0"></p>
-            <p><label>Grupo:</label><input type="texto" name="grupo" id="grupo"></p>
-            <label>Selecciona el grupo:</label>
-            <select name="combonombre">        
-                <option value="0" selected>Seleccione</option> 
+            <label>Telefono de contacto:</label><input type="texto" name="telefono" id="telefono">
+            <select name="combogrado" id="combogrado">
+                <option value="Grado?" selected>Grado</option>
+                <%
+                Statement st0 = Conexiondb.conexiones.createStatement();
+                ResultSet rs0 = st0.executeQuery("select grado from grado");
+                Vector vec0 = new Vector();
+                while(rs0.next()){
+                    vec0.add(rs0.getInt("grado"));
+                }
+                for(int i=0;i<vec0.size();i++){%> 
+                <option value="<%=(i+1)%>"><%=vec0.get(i).toString()%></option> 
+                <%}%>
+                
+                %>   
+                
+            </select>
+            
+            <select name="combonombre" id="combonombre1">        
+                <option value="Grupo?" selected>Grupo</option> 
                 <%
                 Statement st = null;
                 st = Conexiondb.conexiones.createStatement();
@@ -54,12 +68,12 @@
                 
                 
             <p><input type="submit" name="agregaralumno" id="agregaralumno" value="Agregar"></p>
-        
             <B><a href="Menu.jsp">Salir</a></B>
             <B><a href="ModificardatosAlumnos.jsp"> Modificar datos de alumnos </a></B>
         <table border="2" align="center" cellspacing="5">
         <th align="center" valign="middle">Base de datos Alumnos</th>
         <tr>
+            <td><br>ID</br></td>
             <td><br>#control</br></td>
             <td><br>nombre</br></td>
             <td><br>calle</br></td>
@@ -75,6 +89,7 @@
           LinkedList<Alumno1> lista = Consultasdb.getAlumnos();
           for(int i = 0; i< lista.size(); ++i){
               out.println("<tr>");
+              out.println("<td>"+lista.get(i).getId()+"</td>");
               out.println("<td>"+lista.get(i).getNumerocontrol()+"</td>");
               out.println("<td>"+lista.get(i).getNombre()+"</td>");
               out.println("<td>"+lista.get(i).getCalle()+"</td>");

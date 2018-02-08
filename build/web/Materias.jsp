@@ -4,6 +4,10 @@
     Author     : rosac
 --%>
 
+<%@page import="java.util.Vector"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="EscuelaJavaEE.modelo.Conexiondb"%>
 <%@page import="EscuelaJavaEE.modelo.Materia1"%>
 <%@page import="EscuelaJavaEE.modelo.Consultasdb"%>
 <%@page import="java.util.LinkedList"%>
@@ -22,7 +26,24 @@
         <form action="Agregarmateria" method="post">
             <label>Nombre de la materia:</label><input type="texto" name="materia1" id="materia1">
             <label>Siglas de la materia:</label><input type="texto" name="siglas1" id="siglas1">
-            <label>grado:</label><input type="texto" name="grado1" id="grado1" value="0">
+            <select name="combogrado">
+                <option value="Grado?" selected>Grado</option>
+                <%
+                Statement st0 = Conexiondb.conexiones.createStatement();
+                ResultSet rs0 = st0.executeQuery("select grado from grado");
+                Vector vec0 = new Vector();
+                while(rs0.next()){
+                    vec0.add(rs0.getInt("grado"));
+                }
+                for(int i=0;i<vec0.size();i++){%> 
+                <option value="<%=(i+1)%>"><%=vec0.get(i).toString()%></option> 
+                <%}%>
+                
+                %>   
+                
+            </select>
+
+            
             <p><input type="submit" name="agregarmateria" id="agregarmateria" value="Agregar materia"></p>
             <B><a href="Menu.jsp">Salir</a></B>      
             <B><a href="ModificardatosMateria.jsp"> Modificar datos de las materias </a></B>
