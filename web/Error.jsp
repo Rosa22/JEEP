@@ -18,7 +18,7 @@
         <h2>No se pudo procesar tu solicitud, revisa la informacion</h2>
         
         <hr />
-        <p><a href="Alumnos.jsp"><input type="submit" name="salir" id="salir" value="Salir" ></a></p>
+        <p><a href="Menu.jsp"><input type="submit" name="salir" id="salir" value="Salir" ></a></p>
         <hr />
         
     </body>

@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.LinkedList;
-import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -655,11 +655,8 @@ public class Consultasdb extends Conexiondb {
                 }//while
  
         }//try//try
-        catch(SQLException q){
+        catch(SQLException | NumberFormatException q){
             q.getMessage();
-        }//catch
-        catch(NumberFormatException g){
-            g.getMessage();
         }
         finally{
             rs1.close();
@@ -667,7 +664,7 @@ public class Consultasdb extends Conexiondb {
         }//finally
         
         return grupos1;
-    }//static aula1
+    }//static
     /////////////////////////
         
         
@@ -722,7 +719,7 @@ public class Consultasdb extends Conexiondb {
             s.getMessage();
         }
         return false;
-    }//eliminaralumnos
+    }//eliminar
         
         
         
@@ -746,12 +743,126 @@ public class Consultasdb extends Conexiondb {
             st.close();
         }
         return false;
-    }//Actualizar aula
+    }//Actualizar 
     
         
         
     
+    ///////bloque horario
+    
+        
+        public boolean Agregarhorario( String materia1, String dia1, String horario1, String aula1) throws SQLException{
+        try(Statement st = conexiones.createStatement()) {
+            String agrega ="insert into horario(materia, dia, horario, aula)values('"+materia1+"', '"+dia1+"', '"+horario1+"', '"+aula1+"')";  
+            st.executeUpdate(agrega);
+            return true;
+
+        }//try
+        catch(SQLException | NumberFormatException b){
+            b.getMessage();
+        }
+        
+        return false;
+    }//metodo 
+
+    
+    //public boolean tablalumnos() throws SQLException{
+    public static LinkedList<Horario1> getHorarios() throws SQLException{
+        Statement st1 = null;
+        ResultSet rs1 = null;
+        LinkedList<Horario1> listaHorarios=new LinkedList<Horario1>();
+        
+        try{ 
+                st1 = conexiones.createStatement(); 
+                String consulta="select id, materia, dia, horario, aula from horario order by id;";
+                rs1 = st1.executeQuery(consulta);
+                while(rs1.next()){
+                Horario1 horario = new Horario1();
+                horario.setId(rs1.getInt("id"));
+                horario.setMateria(rs1.getString("materia"));
+                horario.setDia(rs1.getString("dia"));
+                horario.setHora(rs1.getString("horario"));
+                horario.setAula(rs1.getString("aula"));
+                
+                listaHorarios.add(horario);
+                }//while
+        }//try
+        catch(SQLException w){
+            w.getMessage();
+        }//catch
+        finally{
+            rs1.close();
+            st1.close();
+            
+        }//finally
+        return listaHorarios;
+    }//tabla
+    
+        
+    public boolean eliminarhorarios(int id) throws SQLException{
+       String c="delete from horario where id='"+id+"'";
+       String c2 ="select * from horario where id='"+id+"'";
+     
+        try(Statement st = conexiones.createStatement(); ResultSet rs = st.executeQuery(c2)) {
+            if(rs.next()){
+                st.executeUpdate(c);
+                return true;
+            }//if 
+        }//try
+        catch(SQLException | NumberFormatException s){
+            s.getMessage();
+        }
+        return false;
+    }//eliminar
+        
+    
+     public static Horario1 Consultarhorarios(int id) throws SQLException, NumberFormatException{
+        Statement st1 = null;
+        ResultSet rs1 = null;
+        Horario1 horario1 = null;
+        try{
+            st1 = conexiones.createStatement();
+            String consulta="select id, materia, dia, horario, aula from horario where id='"+id+"';";
+            rs1 = st1.executeQuery(consulta);
+                 
+            while(rs1.next()){    
+                horario1 = new Horario1();
+                horario1.setId(rs1.getInt("id"));
+                horario1.setMateria(rs1.getString("materia"));
+                horario1.setDia(rs1.getString("dia"));
+                horario1.setHora(rs1.getString("horario"));
+                horario1.setAula(rs1.getString("aula"));
+                }//while
+        }//try
+        catch(SQLException | NumberFormatException q){
+            q.getMessage();
+        }
+        finally{
+            rs1.close();
+            st1.close();
+        }//finally
+        
+        return horario1;
+    }//static
     
     
+        
+        public boolean Actualizarhorario (int id, String materia, String dia, String horario, String aula) throws SQLException{   
+        try(Statement st = conexiones.createStatement()){
+            String actualizar ="update horario set materia= '"+materia+"', dia='"+dia+"', horario='"+horario+"', aula='"+aula+"' where id= '"+id+"'";
+            st.executeUpdate(actualizar);
+            return true;            
+        }//try
+        catch(SQLException | NumberFormatException s){
+            s.getMessage();
+        }//catch
+   
+        return false;
+    }//Actualizar 
+        
+        
+        
+        
+        
     
 }//class
