@@ -84,6 +84,22 @@
         <servlet-name>Consultargrupo</servlet-name>
         <servlet-class>EscuelaJavaEE.servlets.Consultargrupo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Agregarhorario</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Agregarhorario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Eliminarhorario</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Eliminarhorario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Actualizarhorario</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Actualizarhorario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Consultarhorario</servlet-name>
+        <servlet-class>EscuelaJavaEE.servlets.Consultarhorario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Validacion</servlet-name>
         <url-pattern>/Validaciones</url-pattern>
@@ -167,6 +183,22 @@
     <servlet-mapping>
         <servlet-name>Consultargrupo</servlet-name>
         <url-pattern>/Consultargrupo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Agregarhorario</servlet-name>
+        <url-pattern>/Agregarhorario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Eliminarhorario</servlet-name>
+        <url-pattern>/Eliminarhorario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Actualizarhorario</servlet-name>
+        <url-pattern>/Actualizarhorario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Consultarhorario</servlet-name>
+        <url-pattern>/Consultarhorario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

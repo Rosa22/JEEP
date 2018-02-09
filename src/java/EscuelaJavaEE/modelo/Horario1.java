@@ -1,34 +1,6 @@
 package EscuelaJavaEE.modelo;
 
 
-import java.awt.BorderLayout;
-import java.awt.Choice;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import javax.swing.Box;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.table.TableModel;
-import javax.swing.table.TableRowSorter;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -41,7 +13,7 @@ import javax.swing.table.TableRowSorter;
  * @author rosac
  */
 public class Horario1 {
-    
+    private int id;
     private String materia;
     private String dia;
     private String hora;
@@ -49,16 +21,22 @@ public class Horario1 {
 
     
     public Horario1(){
-        this("", "", "", "");
+        this(0,"", "", "", "");
     }
-    public Horario1(String materia, String dia, String hora, String aula){
+    public Horario1(int id,String materia, String dia, String hora, String aula){
+        this.id = id;
         this.materia = materia;
         this.dia = dia;
         this.hora = hora;
         this.aula = aula;
 
     }
-
+    public int getId(){
+        return id;
+    }
+    public void setId(int id){
+        this.id= id;
+    }
     public String getMateria() {
         return materia;
     }
