@@ -16,17 +16,17 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Aulas!</h1>
+        <header>Aulas!</header>
         
         <form action="Agregaraula" method="post">
             <label>Nombre del aula:</label><input type="texto" name="aula1" id="aula1">
             <label>Nombre del edificio:</label><input type="texto" name="edificio1" id="edificio1">
             <p><input type="submit" name="agregaraula" id="agregaraula" value="Agregar aula"></p>
-            <B><a href="Menu.jsp">Salir</a></B>      
+               
             <B><a href="ModificardatosAula.jsp"> Modificar datos de las aulas </a></B>
       
             <table border="2" align="center" cellspacing="8">
-            <th align="center" valign="middle">Base de datos Aulas</th>
+             <caption> Registros</caption>
             <tr>
             <td><br>Id del aula</br></td>
             <td><br>nombre del aula</br></td>
@@ -48,7 +48,7 @@
             
         </form>
         
-        
+            <footer> <B><a href="Menu.jsp">Salir</a></B>  </footer>
         
     </body>
 </html>

@@ -18,10 +18,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/hojaestilos.css"/>
         <title>JSP Page</title>
     </head>
-    <body><h1>Horario!</h1>
-        <hr>
+    <body>
+        <header>Horario!</header>
+       
         <form action="Agregarhorario" method="post">
             <hr>
             <select name="combomateria" id="combomateria">
@@ -68,11 +70,11 @@
 
 
             <p><input type="submit" name="agregarhorario" id="agregarhorario" value="Agregar horario"></p>
-            <B><a href="Menu.jsp">Salir</a></B>      
+                  
             <B><a href="ModificardatosHorario.jsp"> Modificar datos de los horarios </a></B>
       
             <table border="2" align="center" cellspacing="8">
-            <th align="center" valign="middle">Base de datos Horarios</th>
+             <caption> Registros</caption>
             <tr>
             <td><br>ID</br></td>
             <td><br>Materia</br></td>
@@ -100,7 +102,9 @@
         
         
         
-        
+            <footer>
+                <B><a href="Menu.jsp">Salir</a></B>
+            </footer>
         
         
         

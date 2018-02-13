@@ -15,16 +15,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Grados!</h1>
+        <header>Grados!</header>
         
         <form action="Agregargrado" method="post">
             <label>Grado:</label><input type="number" name="grados1" id="grados1">
             <p><input type="submit" name="agregargrado" id="agregargrado" value="Agregar grado"></p>
-            <B><a href="Menu.jsp">Salir</a></B>      
+        
             <B><a href="ModificardatosGrado.jsp"> Modificar datos de los grados </a></B>
       
             <table border="2" align="center" cellspacing="8">
-            <th align="center" valign="middle">Base de datos Grados</th>
+             <caption> Registros</caption>
             <tr>
             <td><br>Id del grado</br></td>
             <td><br>Grado</br></td>
@@ -44,14 +44,8 @@
             </table>
             
         </form>
-        
-        
-        
-        
-        
-        
-        
-        
-        
+   
+        <footer><B><a href="Menu.jsp">Salir</a></B></footer>
+
     </body>
 </html>
