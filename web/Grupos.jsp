@@ -15,15 +15,15 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Grupos!</h1>
+        <header>Grupos!</header>>
         <form action="Agregargrupo" method="post">
             <label>Grupo:</label><input type="texto" name="grupos1" id="grupos1">
             <p><input type="submit" name="agregargrupo" id="agregargraup" value="Agregar grupo"></p>
-            <B><a href="Menu.jsp">Salir</a></B>      
+                 
             <B><a href="ModificardatosGrupo.jsp"> Modificar datos de los grupos </a></B>
       
             <table border="2" align="center" cellspacing="8">
-            <th align="center" valign="middle">Base de datos Grupos</th>
+             <caption> Registros</caption>
             <tr>
             <td><br>Id del grupo</br></td>
             <td><br>Grupo</br></td>
@@ -46,7 +46,7 @@
         </form>
         
         
-        
+            <footer><B><a href="Menu.jsp">Salir</a></B> </footer>
         
         
     </body>
