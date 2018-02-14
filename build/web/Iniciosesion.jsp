@@ -16,13 +16,21 @@
         <header>Iniciar sesion</header>
         <nav></nav>
         <article>
-            <form action="Validaciones" method="post" align="center" >
-            <p><b><label> Nombre del usuario:<input type="texto" name="user" id="user" ></label></b></p>
-            <p><b><label> Clave del usuario:<input type="password" name="pass" id="pass"></label></b></p>
-            <p><input type="submit" name="entrar" id="entrar" value="Entrar"></p>
-
-            </form>
+            
+            
+            <fieldset>
+                <legend>Ingresa los datos:</legend>
+                <form action="Validaciones" method="post" align="center" >
+                <p><b><label> Nombre del usuario:<input type="texto" name="user" id="user" ></label></b></p>
+                <p><b><label> Clave del usuario:<input type="password" name="pass" id="pass"></label></b></p>
+                <p><input type="submit" name="entrar" id="entrar" value="Entrar"></p>
+                </form>
+            </fieldset>
+            
+            
         <article>
+            
+            
         <footer> 
             <a href="index.html">Salir</a> 
         </footer>
