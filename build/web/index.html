@@ -12,7 +12,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             header{
-                background: black;
+                background-color: #333333;
                 text-justify: auto;
                 color: white;
                 font-family: sans-serif;
@@ -22,15 +22,15 @@ and open the template in the editor.
             }
             
             nav {
-                font-size: 15px;
+                font-size: 20px;
                 text-align: right;
-                background-color: black;
+                background-color: #333333;
                 color: white;
             }
            
             footer{
                 font-size: x-small;
-                background-color: white;
+                background-color: #333333;
                 color: black;
                 text-align: center;
             }
@@ -40,22 +40,55 @@ and open the template in the editor.
                 
             }
             a:visited{
-            color: crimson;
+            color: white;
             background-color: transparent;    
             }
             
-            h6{
-                font-size: 16px;
-                font-family: fantasy;
-                color: blue;
-            }
+
             
+            li {
+                float: right;
+                }
+                
+                
+            ul {
+                 list-style-type: none;
+                 margin: 0;
+                 padding: 0;
+                 overflow: hidden;
+                 background-color: #333333;
+                }
+                
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+                font-family: sans-serif;
+                font-size: large;
+                }
+            
+                
+              li a:hover {
+                background-color: #111111;
+               }  
+                
+                
         </style>
     </head>
-    <body style="background-color:hsl(0, 100%, 90%)">
+    <body style="background-color: #333333">
        
         <header style="font-size: 30px">Escuela de prueba</header>
-        <nav> <a href="Iniciosesion.jsp" title="Ir al sistema de control escolar"><strong>Iniciar sesion</strong></a> </nav>
+        <nav> 
+            <ul>
+                <li><a href="Iniciosesion.jsp"> Mision</a></li>
+                <li><a href="Iniciosesion.jsp"> Vision</a></li>
+                <li><a href="Iniciosesion.jsp"> Contacto</a></li>
+                <li><a href="Iniciosesion.jsp"> Iniciar sesion</a></li>
+            </ul>
+        
+        </nav>
            
         <article>
             <img  src="mar.jpg" alt="Imagen de utiles" title="Muelle" width="1315" height="300">
@@ -72,8 +105,15 @@ and open the template in the editor.
         <footer>
             contacto@prueba.com
             
-        <h6><strong>Facebook</strong></h6>   <h6><strong>Twitter</strong></h6>  <h6><strong>Youtube</strong></h6>
-                
+            
+            <ul>
+                <li><a href=""> Facebook</a></li>
+                <li><a href=""> Youtube</a></li>
+                <li><a href=""> Instagram</a></li>
+            </ul>
+            
+            
+            
             
         </footer>
         

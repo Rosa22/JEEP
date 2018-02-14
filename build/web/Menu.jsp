@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="css/hojaestilos.css"/>
         <title>JSP Page</title>
     </head>
-    <body background ="mar.jpg">
+    <body>
         <header align="center">Menu de operaciones</header>
         <article>
         <p><h2 align="center"><a href="Alumnos.jsp">Alumnos</a></h2></p>

@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="css/hojaestilos.css"/>
         <title>JSP Page</title>
     </head>
-    <body background ="mar.jpg">
+    <body>
         <header>Iniciar sesion</header>
         <nav></nav>
         <article>
@@ -26,6 +26,5 @@
         <footer> 
             <a href="index.html">Salir</a> 
         </footer>
-          
     </body>
 </html>
