@@ -8,13 +8,7 @@ and open the template in the editor.
     Author     : rosac
 */
 
-    a:visited{
-       
-       color: crimson;
-       background-color: transparent;    
-       font-size: larger;
-            
-    }
+ 
     
     table, th, td{
         
@@ -26,22 +20,7 @@ and open the template in the editor.
         
     }
     
-    header{
-        
-        font-family: sans-serif;
-        color: brown;
-        font-size: xx-large;
-        text-align: center;
-        
-    }
-    
-    footer{
-        
-        font-family: sans-serif;
-        font-size: x-large;
-        color: brown;
-        text-align: center;
-    }
+  
     
     article{
         font-family: sans-serif;
@@ -55,3 +34,54 @@ and open the template in the editor.
         background-color: #333333;
         
     }
+    
+    header{
+            background-color: #333333;
+            text-justify: auto;
+            color: white;
+            font-family: sans-serif;
+            font-size: xx-large;
+            text-align: center;
+                
+            }
+    
+            
+            
+   a:visited{
+            color: white;
+            background-color: transparent;    
+            }
+            
+
+            
+    li {
+            float: left;
+        }
+                
+                
+    ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+                }
+                
+    li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: large;
+                }
+            
+                
+    li a:hover {
+            background-color: #111111;
+               }
+               
+    label {
+            color: white;       
+          }

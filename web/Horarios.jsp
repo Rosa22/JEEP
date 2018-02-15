@@ -102,9 +102,11 @@
         
         
         
-            <footer>
-                <B><a href="Menu.jsp">Salir</a></B>
-            </footer>
+        <footer>
+            <ul>
+                <li><a href="Menu.jsp">Salir</a></li>
+            </ul>
+        </footer>
         
         
         

@@ -20,8 +20,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Materias!</h1>
-        <hr>
+        <header>
+            Materias!
+        </header>
         
         <form action="Agregarmateria" method="post">
             <label>Nombre de la materia:</label><input type="texto" name="materia1" id="materia1">
@@ -44,8 +45,7 @@
             </select>
 
             
-            <p><input type="submit" name="agregarmateria" id="agregarmateria" value="Agregar materia"></p>
-            <B><a href="Menu.jsp">Salir</a></B>      
+            <p><input type="submit" name="agregarmateria" id="agregarmateria" value="Agregar materia"></p>    
             <B><a href="ModificardatosMateria.jsp"> Modificar datos de las materias </a></B>
       
             <table border="2" align="center" cellspacing="8">
@@ -74,7 +74,10 @@
             
         </form>
         
-        
-        
+        <footer>
+            <ul>
+                <li><a href="Menu.jsp">Salir</a></li>
+            </ul>
+        </footer>
     </body>
 </html>

@@ -17,6 +17,7 @@
     <body>
         <header>Grados!</header>
         
+      
         <form action="Agregargrado" method="post">
             <label>Grado:</label><input type="number" name="grados1" id="grados1">
             <p><input type="submit" name="agregargrado" id="agregargrado" value="Agregar grado"></p>
@@ -44,8 +45,12 @@
             </table>
             
         </form>
-   
-        <footer><B><a href="Menu.jsp">Salir</a></B></footer>
+            
+        <footer>
+            <ul>
+                <li><a href="Menu.jsp">Salir</a></li>
+            </ul>
+        </footer>
 
     </body>
 </html>

@@ -15,7 +15,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <header>Grupos!</header>>
+        <header>Grupos!</header>
         <form action="Agregargrupo" method="post">
             <label>Grupo:</label><input type="texto" name="grupos1" id="grupos1">
             <p><input type="submit" name="agregargrupo" id="agregargraup" value="Agregar grupo"></p>
@@ -46,7 +46,11 @@
         </form>
         
         
-            <footer><B><a href="Menu.jsp">Salir</a></B> </footer>
+        <footer>
+            <ul>
+                <li><a href="Menu.jsp">Salir</a></li>
+            </ul>
+        </footer>
         
         
     </body>
