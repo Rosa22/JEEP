@@ -109,13 +109,11 @@
         </form>
         
         <footer>
-<<<<<<< HEAD
-             <B><a href="Menu.jsp">Salir</a></B>
-=======
+
             <ul>
                 <li><a href="Menu.jsp">Salir</a></li>
             </ul>
->>>>>>> test
+
         </footer>
 
     </body>

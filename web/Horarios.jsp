@@ -25,7 +25,6 @@
         <header>Horario!</header>
        
         <form action="Agregarhorario" method="post">
-            <hr>
             <select name="combomateria" id="combomateria">
                 <option value="combomateria" selected>Materia</option>
                 <%
@@ -101,20 +100,13 @@
         </form>
         
         
-        
-<<<<<<< HEAD
-            <footer>
-                <B><a href="Menu.jsp">Salir</a></B>
-            </footer>
-=======
+
         <footer>
             <ul>
                 <li><a href="Menu.jsp">Salir</a></li>
             </ul>
         </footer>
->>>>>>> test
-        
-        
+     
         
     </body>
 </html>

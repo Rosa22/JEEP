@@ -9,10 +9,6 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<<<<<<< HEAD
-        <link rel="stylesheet" href="css/hojaestilos.css"/>
-=======
->>>>>>> test
         <title>JSP Page</title>
         <style>
             
@@ -65,50 +61,32 @@
                
         </style>
     </head>
-<<<<<<< HEAD
-    <body>
-        <header align="center">Menu de operaciones</header>
-        <article>
-        <p><h2 align="center"><a href="Alumnos.jsp">Alumnos</a></h2></p>
-        <p><h2 align="center"><a href="Horarios.jsp">Horario</a></h2></p>
-        <p><h2 align="center"><a href="Materias.jsp">Materias</a></h2></p>
-        <p><h2 align="center"><a href="Aulas.jsp">Aula</a></h2></p>
-        <p><h2 align="center"><a href="Grados.jsp">Grado</a></h2></p>
-        <p><h2 align="center"><a href="Grupos.jsp">Grupo</a></h2></p>
-
-        </article>
-        
-    <footer>
-        <B><a href="Iniciosesion.jsp">Salir</a></B>
-=======
     <body style="background-color: #333333" >
         <header align="center">Menu de operaciones</header>
-        <article>
-
-
-    <ul>
+    
+        
+    <article>
+        <ul>
         <li ><a href="Alumnos.jsp">Alumnos</a></li>
         <li><a href="Horarios.jsp">Horario</a></li>
         <li><a href="Materias.jsp">Materias</a></li>
         <li><a href="Aulas.jsp">Aula</a></li>
         <li><a href="Grados.jsp">Grado</a></li>
         <li><a href="Grupos.jsp">Grupo</a></li>
-    </ul>
+        </ul>
         
-
-        </article>
+    </article>
         
-        <article>
-            
+    <article>        
             <img alt="paisaje" src="mar.jpg"> 
-        </article>
+    </article>
         
 
     <footer>
             <ul>
                 <li><a href="Iniciosesion.jsp">Salir</a></li>
             </ul>
->>>>>>> test
+
     </footer>
 
     </body>
