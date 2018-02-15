@@ -11,13 +11,57 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/hojaestilos.css"/>
         <title>JSP Page</title>
+<<<<<<< HEAD
+=======
+        
+        <style>
+            
+            li {
+                float: left;
+                }
+                
+                
+            ul {
+                 list-style-type: none;
+                 margin: 0;
+                 padding: 0;
+                 overflow: hidden;
+                 background-color: #333333;
+                }
+                
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 36px;
+                text-decoration: none;
+                font-family: sans-serif;
+                font-size: large;
+                }
+            
+                
+              li a:hover {
+                background-color: #111111;
+               } 
+
+              a:visited{
+                color: white;
+                background-color: transparent;    
+                }
+            
+        </style>
+  
+>>>>>>> test
     </head>
     <body>
         <header>Iniciar sesion</header>
         <nav></nav>
         <article>
+<<<<<<< HEAD
             
             
+=======
+>>>>>>> test
             <fieldset>
                 <legend>Ingresa los datos:</legend>
                 <form action="Validaciones" method="post" align="center" >
@@ -26,6 +70,7 @@
                 <p><input type="submit" name="entrar" id="entrar" value="Entrar"></p>
                 </form>
             </fieldset>
+<<<<<<< HEAD
             
             
         <article>
@@ -34,5 +79,23 @@
         <footer> 
             <a href="index.html">Salir</a> 
         </footer>
+=======
+        </article>
+            
+            
+        <article>
+             <img alt="paisaje" src="mar.jpg"> 
+        </article>
+            
+            
+            
+        <footer> 
+            <ul>
+                <li><a href="index.html">Salir</a></li>
+            </ul>
+        </footer>
+        
+        
+>>>>>>> test
     </body>
 </html>
