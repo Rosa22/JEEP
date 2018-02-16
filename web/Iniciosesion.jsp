@@ -9,12 +9,26 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="css/hojaestilos.css"/>
+
         <title>JSP Page</title>
-<<<<<<< HEAD
-=======
         
         <style>
+            
+            
+            
+          header{
+            background-color: #333333;
+            text-justify: auto;
+            color: white;
+            font-family: sans-serif;
+            font-size: xx-large;
+            text-align: center;
+                
+            }
+            
+            label{
+                color: white;
+            }
             
             li {
                 float: left;
@@ -48,20 +62,18 @@
                 color: white;
                 background-color: transparent;    
                 }
+                legend{
+                    color: white;
+                }
             
         </style>
   
->>>>>>> test
+
     </head>
-    <body>
+    <body style="background-color: #333333">
         <header>Iniciar sesion</header>
-        <nav></nav>
         <article>
-<<<<<<< HEAD
-            
-            
-=======
->>>>>>> test
+
             <fieldset>
                 <legend>Ingresa los datos:</legend>
                 <form action="Validaciones" method="post" align="center" >
@@ -70,18 +82,8 @@
                 <p><input type="submit" name="entrar" id="entrar" value="Entrar"></p>
                 </form>
             </fieldset>
-<<<<<<< HEAD
-            
-            
-        <article>
-            
-            
-        <footer> 
-            <a href="index.html">Salir</a> 
-        </footer>
-=======
+
         </article>
-            
             
         <article>
              <img alt="paisaje" src="mar.jpg"> 
@@ -96,6 +98,5 @@
         </footer>
         
         
->>>>>>> test
     </body>
 </html>

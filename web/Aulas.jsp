@@ -17,14 +17,20 @@
     </head>
     <body>
         <header>Aulas!</header>
+        <nav>
+        <form action="Agregaraula" method="post"> 
+            <ul>
+                <li><label>Nombre del aula:<input type="text" name="aula1" id="aula1"></label></li>
+                <li><label>Nombre del edificio:<input type="text" name="edificio1" id="edificio1"></label></li>
+                <li><input type="submit" name="agregaraula" id="agregaraula" value="Agregar aula"</li>
+            </ul>
+                
+            <B><a href="ModificardatosAula.jsp"> Modificar datos</a></B>
+        </form>
+   
+        </nav>
         
-        <form action="Agregaraula" method="post">
-            <label>Nombre del aula:</label><input type="texto" name="aula1" id="aula1">
-            <label>Nombre del edificio:</label><input type="texto" name="edificio1" id="edificio1">
-            <p><input type="submit" name="agregaraula" id="agregaraula" value="Agregar aula"></p>
-               
-            <B><a href="ModificardatosAula.jsp"> Modificar datos de las aulas </a></B>
-      
+        <article>
             <table border="2" align="center" cellspacing="8">
              <caption> Registros</caption>
             <tr>
@@ -40,15 +46,12 @@
                 out.println("<td>" + listaula.get(i).Getnombredificio()+"</td>");
                 out.println("</tr>");  
                 }
-                
             %>
             </tr>
-            
-            </table>
-            
-        </form>
-        
+            </table> 
+        </article>
 
+            
         <footer>
             <ul>
                 <li><a href="Menu.jsp">Salir</a></li>

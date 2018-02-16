@@ -19,13 +19,17 @@ and open the template in the editor.
         
     }
     
-    article{
-        font-family: sans-serif;
-        font-size: large;
-        color: blueviolet;
-        text-align: center;
-        
-    }
+
+    
+    article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+    
+    
+    
     
     body{
         background-color: #333333;
@@ -51,20 +55,21 @@ and open the template in the editor.
             
 
             
-    li {
+   footer li {
             float: left;
         }
                 
                 
-    ul {
+  footer ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
             background-color: #333333;
+            color: white;
                 }
                 
-    li a {
+   footer li a {
             display: block;
             color: white;
             text-align: center;
@@ -75,7 +80,7 @@ and open the template in the editor.
                 }
             
                 
-    li a:hover {
+     footer li a:hover {
             background-color: #111111;
                }
                
@@ -83,3 +88,18 @@ and open the template in the editor.
             color: white;       
           }
 
+    nav {
+        float: left;
+        max-width: 160px;
+        margin: 0;
+        padding: 1em;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+   
+    nav ul a {
+        text-decoration: none;
+    }

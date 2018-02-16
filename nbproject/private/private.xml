@@ -5,13 +5,13 @@
         <group>
             <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/web/Grados.jsp</file>
             <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/web/Aulas.jsp</file>
-            <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/web/css/hojaestilos.css</file>
             <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/web/Alumnos.jsp</file>
-            <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/web/Iniciosesion.jsp</file>
-            <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/web/index.html</file>
+            <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/web/Menu.jsp</file>
             <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/web/Horarios.jsp</file>
+            <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/src/java/EscuelaJavaEE/servlets/Agregarmateria.java</file>
             <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/web/Materias.jsp</file>
             <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/web/Grupos.jsp</file>
+            <file>file:/home/rosac/NetBeansProjects/EscuelaJavaEE/web/Mostraralumno.jsp</file>
         </group>
     </open-files>
 </project-private>

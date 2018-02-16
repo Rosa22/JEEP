@@ -23,12 +23,12 @@
         <header>
             Materias!
         </header>
-        
+        <nav>
         <form action="Agregarmateria" method="post">
             <label>Nombre de la materia:</label><input type="texto" name="materia1" id="materia1">
             <label>Siglas de la materia:</label><input type="texto" name="siglas1" id="siglas1">
             <select name="combogrado">
-                <option value="Grado?" selected>Grado</option>
+                <option selected>Grado</option>
                 <%
                 Statement st0 = Conexiondb.conexiones.createStatement();
                 ResultSet rs0 = st0.executeQuery("select grado from grado");
@@ -37,7 +37,7 @@
                     vec0.add(rs0.getInt("grado"));
                 }
                 for(int i=0;i<vec0.size();i++){%> 
-                <option value="<%=(i+1)%>"><%=vec0.get(i).toString()%></option> 
+                <option value="<%=vec0.get(i).toString()%>"><%=vec0.get(i).toString()%></option> 
                 <%}%>
                 
                 %>   
@@ -46,8 +46,11 @@
 
             
             <p><input type="submit" name="agregarmateria" id="agregarmateria" value="Agregar materia"></p>    
-            <B><a href="ModificardatosMateria.jsp"> Modificar datos de las materias </a></B>
-      
+            <B><a href="ModificardatosMateria.jsp"> Modificar datos</a></B>
+         </form>
+        </nav>
+        
+        <article>
             <table border="2" align="center" cellspacing="8">
             <th align="center" valign="middle">Base de datos Materias</th>
             <tr>
@@ -72,7 +75,7 @@
             %>
             </table>
             
-        </form>
+        </article>
         
         <footer>
             <ul>

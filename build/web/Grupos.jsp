@@ -18,12 +18,19 @@
 
         <header>Grupos!</header>
 
+        <nav>
         <form action="Agregargrupo" method="post">
-            <label>Grupo:</label><input type="texto" name="grupos1" id="grupos1">
-            <p><input type="submit" name="agregargrupo" id="agregargraup" value="Agregar grupo"></p>
-                 
-            <B><a href="ModificardatosGrupo.jsp"> Modificar datos de los grupos </a></B>
-      
+            <ul>
+                <li><label>Grupo:</label><input type="text" name="grupos1" id="grupos1"</li>
+                <li><input type="submit" name="agregargrupo" id="agregargrupo" value="Agregar grupo"></li>
+            </ul>
+              
+            <B><a href="ModificardatosGrupo.jsp"> Modificar datos </a></B>
+        </form>
+
+        </nav>
+        
+        <article>
             <table border="2" align="center" cellspacing="8">
              <caption> Registros</caption>
             <tr>
@@ -45,9 +52,8 @@
             
             </table>
             
-        </form>
         
-        
+        </article>
 
         <footer>
             <ul>

@@ -26,6 +26,8 @@
         
         <header> Alumnos!</header>
        
+        
+        <nav>
             <form action="Agregaralumno" method="post">
             <label>Numero de control:</label><input type="texto" name="nc1" id="nc1" value="0">
             <label>Alumno:</label><input type="texto" name="alumno" id="alumno" value= >
@@ -69,7 +71,12 @@
                 
             <p><input type="submit" name="agregaralumno" id="agregaralumno" value="Agregar"></p>
            
-            <B><a href="ModificardatosAlumnos.jsp"> Modificar datos de alumnos </a></B>
+            <B><a href="ModificardatosAlumnos.jsp"> Modificar datos</a></B>
+           </form>
+        </nav>
+            
+         <article>
+            
         <table border="2" align="center" cellspacing="8">
         <caption> Registros</caption>
         <tr>
@@ -106,7 +113,8 @@
           
          %>
         </table>
-        </form>
+        
+         </article>
         
         <footer>
 

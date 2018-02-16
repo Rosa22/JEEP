@@ -24,6 +24,7 @@
     <body>
         <header>Horario!</header>
        
+        <nav>
         <form action="Agregarhorario" method="post">
             <select name="combomateria" id="combomateria">
                 <option value="combomateria" selected>Materia</option>
@@ -50,7 +51,7 @@
                 <option value="Sabado">Sabado</option>
             </select>
             
-            <label>Horario:</label><input type="texto" name="horario1" id="horario1">
+                <p><label>Horario:</label><input type="texto" name="horario1"></p>
              
             <select name="comboaula" id="comboaula">
                 <option value="comboaula" selected>Aula</option>
@@ -68,10 +69,15 @@
             </select>
 
 
-            <p><input type="submit" name="agregarhorario" id="agregarhorario" value="Agregar horario"></p>
+            <p><input type="submit" name="agregarhorario" value="Agregar horario"></p>
                   
-            <B><a href="ModificardatosHorario.jsp"> Modificar datos de los horarios </a></B>
+            <B><a href="ModificardatosHorario.jsp"> Modificar datos</a></B>
       
+        </form>
+        </nav>
+            
+                
+        <article>
             <table border="2" align="center" cellspacing="8">
              <caption> Registros</caption>
             <tr>
@@ -97,7 +103,7 @@
             %>
             </table>
             
-        </form>
+        </article>
         
         
 
