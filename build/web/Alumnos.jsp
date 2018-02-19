@@ -29,14 +29,14 @@
         
         <nav>
             <form action="Agregaralumno" method="post">
-            <label>Numero de control:</label><input type="texto" name="nc1" id="nc1" value="0">
-            <label>Alumno:</label><input type="texto" name="alumno" id="alumno" value= >
-            <label>Calle:</label><input type="texto" name="calle" id="calle">
-            <label>Numero:</label><input type="texto" name="numero" id="numero" value="0">
-            <p><label>Colonia:</label><input type="texto" name="colonia" id="colonia">
-            <label>Codigo Postal:</label><input type="texto" name="cp" id="cp" value="0">
-            <label>Correo:</label><input type="texto" name="correo" id="correo">
-            <label>Telefono de contacto:</label><input type="texto" name="telefono" id="telefono">
+                <label>Numero de control:</label><input type="text" name="nc1" id="nc1" value="0" autocomplete="off" autofocus pattern="[0-9]{8}" title="8 digitos iniciando con 0" required="">
+                <label>Alumno:</label><input type="text" name="alumno" id="alumno" autocomplete="off" pattern="[a-z]" title="solo letras" required="">
+                <label>Calle:</label><input type="text" name="calle" id="calle" autocomplete="off" pattern="[a-z]" title="solo letras">
+                <label>Numero:</label><input type="text" name="numero" id="numero" value="0" autocomplete="off" pattern="[0-9]" title="solo numeros">
+                <p><label>Colonia:</label><input type="text" name="colonia" id="colonia" autocomplete="off" pattern="[a-z]" title="Solo letras">
+                    <label>Codigo Postal:</label><input type="text" name="cp" id="cp" value="0" autocomplete="off" pattern="[0-9]{5}" title="solo numeros">
+                    <label>Correo:</label><input type="email" name="correo" id="correo" autocomplete="off" title="usar el formato de correo">
+                    <label>Telefono de contacto:</label><input type="text" name="telefono" id="telefono" autocomplete="off" pattern="[0-9]{10}" title="solo numeros">
             <select name="combogrado" id="combogrado">
                 <option value="Grado?" selected>Grado</option>
                 <%

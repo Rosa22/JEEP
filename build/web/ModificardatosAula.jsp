@@ -9,26 +9,40 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" href="css/hojaestilos.css"/>
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Operaciones con la base aulas!</h1>
-         <form action="Eliminaraula" method="post">
-        <h4>Borrar aula</h4>
-        <label>Id del aula:</label><input type="texto" name="idaula31" id="idaula31" value="#">
-        <input type="submit" name="eliminaraula" id="eliminaraula" value="Eliminar aula">
-        </form>
+        <header>Modificar datos</header>
+        <nav><label>Aula</label></nav>
+        
+        <section>
+            <article>
+                 <form action="Eliminaraula" method="post">
+                     <p><label>Borrar aula</label></p>
+                <label>Id del aula:</label><input type="texto" name="idaula31" id="idaula31" value="#">
+                <input type="submit" name="eliminaraula" id="eliminaraula" value="Eliminar aula">
+                </form>
+            </article>
+        </section>
+        
 
-        <hr>
-        <form action="Consultaraula" method="post">
-        <h4>Buscar y modificar aulas</h4>
-        <label>Id del aula a buscar:</label><input type="texto" name="ideaula3" id="ideaula3" value="#" >
-        <input type="submit" name="consultaraula" id="consultaraula" value="Buscar aula">
-        </form>
+        <section>
+            <article>
+                 <form action="Consultaraula" method="post">
+                     <p><label>Buscar y modificar aulas</label></p>
+                 <label>Id del aula a buscar:</label><input type="text" name="ideaula3" id="ideaula3" value="#" >
+                 <input type="submit" name="consultaraula" id="consultaraula" value="Buscar aula">
+                 </form>
+            </article>
+            
+        </section>
+            
+
     
-        <hr />
+        <footer>
         <p><a href="Aulas.jsp"><input type="submit" name="salir" id="salir" value="Regresar" ></a></p>
-        <hr />
+        </footer>
             
         
         

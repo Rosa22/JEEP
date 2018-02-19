@@ -13,22 +13,33 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Operaciones con la base alumnos</h1>
-        <form action="Eliminaralumno" method="post">
-        <h4>Borrar alumno</h4>
-        <label>Numero de control:</label><input type="texto" name="numeroc" id="numeroc" value="#">
-        <input type="submit" name="eliminaralumno" id="eliminaralumno" value="Eliminar alumno">
-        </form>
+        <header>Modificar datos</header>
+        <nav><label>Alumnos</label></nav>
+            
+        <section>
+            <article>
+                        <form action="Eliminaralumno" method="post">
+                        <p><label>Eliminar</label></p>
+                        <label>Numero de control:</label><input type="text" name="numeroc" id="numeroc" value="#">
+                        <input type="submit" name="eliminaralumno" id="eliminaralumno" value="Eliminar alumno">
+                        </form>   
+            </article>
+            
+        </section>
 
-        <hr>
-        <form action="Consultaralumno" method="post">
-        <h4>Buscar y modificar alumnos</h4>
-        <label>Numero de control:</label><input type="text" name="numeroc1" id="numeroc1" value="#" >
-        <input type="submit" name="consultaralumno" id="consultaralumno" value="Buscar alumno"></form>
-
-        <hr />
+        <section>
+            <article>
+                     <form action="Consultaralumno" method="post">
+                     <p><label>Buscar y modificar alumno</label></p>
+                     <label>Numero de control:</label><input type="text" name="numeroc1" id="numeroc1" value="#" >
+                     <input type="submit" name="consultaralumno" id="consultaralumno" value="Buscar alumno"></form>
+            </article>
+        </section>
+        
+        
+        <footer>
         <p><a href="Alumnos.jsp"><input type="submit" name="salir" id="salir" value="Regresar" ></a></p>
-        <hr />
+        </footer>
        
         
     </body>

@@ -22,15 +22,15 @@
         <hr />
         <form action="Actualizaralumno" method="post">
         </p>
-        <label>ID:</label><input type="texto" name="idc3" id="idc3" value="<%= alumno.getId()%>" readonly="readonly">
-        <label>Numero de control</label><input type="texto" name="numeroc3" id="numeroc3" value="<%= alumno.getNumerocontrol() %>">
-        <label>Alumno:</label><input type="texto" name="alumno" id="alumno" value="<%= alumno.getNombre() %>" >
-        <label>Calle:</label><input type="texto" name="calle" id="calle" value="<%= alumno.getCalle() %>">
-        <label>Numero:</label><input type="texto" name="numero" id="numero" value="<%= alumno.getNumero() %>">
-        <label>Colonia:</label><input type="texto" name="colonia" id="colonia" value="<%= alumno.getColonia() %>">
-        <p><label>Codigo postal:</label><input type="texto" name="cp" id="cp" value="<%= alumno.getCp()%>">
-        <label>Correo:</label><input type="texto" name="correo" id="correo" value="<%= alumno.getEmail() %>">
-        <label>Telefono de contacto:</label><input type="texto" name="telefono" id="telefono" value="<%= alumno.getTelefono() %>">
+        <label>ID:</label><input type="text" name="idc3" id="idc3" value="<%= alumno.getId()%>" readonly="readonly">
+        <label>Numero de control</label><input type="text" name="numeroc3" id="numeroc3" value="<%= alumno.getNumerocontrol() %>">
+        <label>Alumno:</label><input type="text" name="alumno" id="alumno" value="<%= alumno.getNombre() %>" >
+        <label>Calle:</label><input type="text" name="calle" id="calle" value="<%= alumno.getCalle() %>">
+        <label>Numero:</label><input type="text" name="numero" id="numero" value="<%= alumno.getNumero() %>">
+        <label>Colonia:</label><input type="text" name="colonia" id="colonia" value="<%= alumno.getColonia() %>">
+        <p><label>Codigo postal:</label><input type="text" name="cp" id="cp" value="<%= alumno.getCp()%>">
+        <label>Correo:</label><input type="email" name="correo" id="correo" value="<%= alumno.getEmail() %>">
+        <label>Telefono de contacto:</label><input type="text" name="telefono" id="telefono" value="<%= alumno.getTelefono() %>">
          <select name="combogrado" id="combogrado" >
              <option><%=alumno.getGrado()%></option>
                 <%

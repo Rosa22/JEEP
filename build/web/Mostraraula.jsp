@@ -19,9 +19,9 @@
         <hr />
         <form action="Actualizaraula" method="post">
         </p>
-        <label>id:</label><input type="texto" name="aulaid1" id="aulaid1" value="<%= aula.Getid()%>" readonly="readonly" >
-        <label>Nombre del aula:</label><input type="texto" name="aulanombre1" id="aulanombre1" value="<%= aula.Getnombreaula()%>" >
-        <label>Nombre del edificio:</label><input type="texto" name="aulaedificio1" id="aulaedificio1" value="<%= aula.Getnombredificio() %>">
+        <label>id:</label><input type="text" name="aulaid1" id="aulaid1" value="<%= aula.Getid()%>" readonly="readonly" >
+        <label>Nombre del aula:</label><input type="text" name="aulanombre1" id="aulanombre1" value="<%= aula.Getnombreaula()%>" >
+        <label>Nombre del edificio:</label><input type="text" name="aulaedificio1" id="aulaedificio1" value="<%= aula.Getnombredificio() %>">
         <p><input type="submit" name="modificaraula" id="modificaraula" value="Modificar aula"></p>
         </form>
          <hr />

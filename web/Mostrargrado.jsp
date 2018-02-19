@@ -20,16 +20,13 @@
         <hr />
         <form action="Actualizargrado" method="post">
         </p>
-        <label>id:</label><input type="texto" name="gradoid1" id="gradoid1" value="<%= grado.getid()%>" readonly="readonly" >
+        <label>id:</label><input type="text" name="gradoid1" id="gradoid1" value="<%= grado.getid()%>" readonly="readonly" >
         <label>Grado:</label><input type="number" name="nombregrado1" id="nombregrado1" value="<%= grado.getgrado() %>" >
         <p><input type="submit" name="modificargrado" id="modificargrado" value="Modificar grado"></p> 
         </form>
          <hr />
          <p><a href="ModificardatosGrado.jsp"><input type="submit" name="salir" id="salir" value="Salir" ></a></p>
         <hr />
-       
-        
-        
-        
+  
     </body>
 </html>

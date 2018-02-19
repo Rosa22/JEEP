@@ -9,25 +9,35 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" href="css/hojaestilos.css"/>
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Operaciones con la base materias!</h1>
-         <form action="Eliminarmateria" method="post">
-        <h4>Borrar materia</h4>
-        <label>Id de la materia:</label><input type="texto" name="ide2" id="ide2" value="#">
-        <input type="submit" name="eliminarmateria" id="eliminarmateria" value="Eliminar materia">
-        </form>
+        <header>Modificar datos</header>
+        <nav><label>Materia</label></nav>
+        <section>
+            <article>
+                    <form action="Eliminarmateria" method="post">
+                    <p><label>Borrar materia</label></p>
+                    <label>Id de la materia:</label><input type="text" name="ide2" id="ide2" value="#" autocomplete="off">
+                    <input type="submit" name="eliminarmateria" id="eliminarmateria" value="Eliminar materia">
+                    </form>  
+            </article>
+        </section>
 
-        <hr>
-        <form action="Consultarmateria" method="post">
-        <h4>Buscar y modificar materias</h4>
-        <label>Id de la materia a buscar:</label><input type="texto" name="idmat3" id="idmat3" value="#" >
-        <input type="submit" name="consultarmateria" id="consultarmateria" value="Buscar materia"></form>
-    
-        <hr />
+
+        <section>
+            <article>
+                 <form action="Consultarmateria" method="post">
+                 <p><label>Buscar y modificar materias</label></p>
+                 <label>Id de la materia a buscar:</label><input type="text" name="idmat3" id="idmat3" value="#" autocomplete="off">
+                 <input type="submit" name="consultarmateria" id="consultarmateria" value="Buscar materia"></form>
+            </article>
+        </section>
+        
+        <footer>
         <p><a href="Materias.jsp"><input type="submit" name="salir" id="salir" value="Regresar" ></a></p>
-        <hr />
+        </footer>
        
         
     </body>

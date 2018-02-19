@@ -77,8 +77,8 @@
             <fieldset>
                 <legend>Ingresa los datos:</legend>
                 <form action="Validaciones" method="post" align="center" >
-                <p><b><label> Nombre del usuario:<input type="texto" name="user" id="user" ></label></b></p>
-                <p><b><label> Clave del usuario:<input type="password" name="pass" id="pass"></label></b></p>
+                    <p><b><label> Nombre del usuario:<input type="texto" name="user" id="user" autocomplete="off" autofocus></label></b></p>
+                    <p><b><label> Clave del usuario:<input type="password" name="pass" id="pass" autocomplete="off"></label></b></p>
                 <p><input type="submit" name="entrar" id="entrar" value="Entrar"></p>
                 </form>
             </fieldset>

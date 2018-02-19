@@ -25,8 +25,8 @@
         </header>
         <nav>
         <form action="Agregarmateria" method="post">
-            <label>Nombre de la materia:</label><input type="texto" name="materia1" id="materia1">
-            <label>Siglas de la materia:</label><input type="texto" name="siglas1" id="siglas1">
+            <label>Nombre de la materia:</label><input type="text" name="materia1" id="materia1" autocomplete="off" autofocus="" pattern="[a-z]" title="solo letras">
+            <label>Siglas de la materia:</label><input type="text" name="siglas1" id="siglas1" autocomplete="off">
             <select name="combogrado">
                 <option selected>Grado</option>
                 <%

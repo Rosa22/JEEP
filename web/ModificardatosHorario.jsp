@@ -9,27 +9,39 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" href="css/hojaestilos.css"/>
         <title>JSP Page</title>
     </head>
     <body>
         
-        <h1>Operaciones con la base horarios!</h1>
-        <form action="Eliminarhorario" method="post">
-        <h4>Borrar horario</h4>
-        <label>Id a borrar:</label><input type="texto" name="idh" id="idh" value="#">
-        <input type="submit" name="eliminarhorario" id="eliminarhorario" value="Eliminar horario">
+        <header>Modificar datos</header>
+        <nav><label>Horarios</label></nav>
+        
+        <section>
+            <article>
+                <form action="Eliminarhorario" method="post">
+                <p><label>Borrar horario</label></p>
+                <label>Id a borrar:</label><input type="text" name="idh" id="idh" value="#" autocomplete="off">
+                <input type="submit" name="eliminarhorario" id="eliminarhorario" value="Eliminar horario">
+        </form> 
+            </article>
+            
+        </section>
+        
+        <section>
+            <article>
+                <form action="Consultarhorario" method="post">
+                <p><label>Buscar y modificar</label></p>
+                <label>Id a buscar:</label><input type="text" name="idh2" id="idh2" value="#" autocomplete="off">
+                 <input type="submit" name="consultarhorario" id="consultarhorario" value="Buscar horario">
         </form>
-
-        <hr>
-        <form action="Consultarhorario" method="post">
-        <h4>Buscar y modificar horarios</h4>
-        <label>Id a buscar:</label><input type="texto" name="idh2" id="idh2" value="#" >
-        <input type="submit" name="consultarhorario" id="consultarhorario" value="Buscar horario">
-        </form>
-    
-        <hr />
+            </article>
+        </section>
+            
+            
+        <footer>
         <p><a href="Horarios.jsp"><input type="submit" name="salir" id="salir" value="Regresar" ></a></p>
-        <hr />
+        </footer>
         
         
         

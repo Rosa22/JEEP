@@ -9,27 +9,39 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" href="css/hojaestilos.css"/>
         <title>JSP Page</title>
     </head>
     <body>
         
-        <h1>Operaciones con la base grupos!</h1>
-        <form action="Eliminargrupo" method="post">
-        <h4>Borrar grupo</h4>
-        <label>Id del grupo:</label><input type="texto" name="idgrupo31" id="idgrupo31" value="#">
-        <input type="submit" name="eliminargrupo" id="eliminargrupo" value="Eliminar grupo">
-        </form>
+        <header>Modificar datos</header>
+        <nav><label>Grupo</label></nav>
+        <section>
+            <article>
+                     <form action="Eliminargrupo" method="post">
+                     <p> <label>Borrar grupo</label></p>
+                     <label>Id del grupo:</label><input type="text" name="idgrupo31" id="idgrupo31" value="#" autocomplete="off">
+                     <input type="submit" name="eliminargrupo" id="eliminargrupo" value="Eliminar grupo">
+                     </form>
+            </article>
+        </section>
 
-        <hr>
-        <form action="Consultargrupo" method="post">
-        <h4>Buscar y modificar grupos</h4>
-        <label>Id del grupo a buscar:</label><input type="texto" name="idegrupo3" id="idegrupo3" value="#" >
-        <input type="submit" name="consultargrupo" id="consultargrupo" value="Buscar grupo">
-        </form>
+
+        <section>
+            <article>
+                    <form action="Consultargrupo" method="post">
+                    <p><label>Buscar y modificar grupos</label></p>
+                    <label>Id del grupo a buscar:</label><input type="text" name="idegrupo3" id="idegrupo3" value="#" autocomplete="off">
+                    <input type="submit" name="consultargrupo" id="consultargrupo" value="Buscar grupo">
+                    </form>
+            </article>
+            
+        </section>
+
     
-        <hr />
+        <footer>
         <p><a href="Grupos.jsp"><input type="submit" name="salir" id="salir" value="Regresar" ></a></p>
-        <hr />
+        </footer>
         
         
         

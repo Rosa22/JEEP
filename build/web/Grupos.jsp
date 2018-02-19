@@ -21,7 +21,7 @@
         <nav>
         <form action="Agregargrupo" method="post">
             <ul>
-                <li><label>Grupo:</label><input type="text" name="grupos1" id="grupos1"</li>
+                <li><label>Grupo:</label><input type="text" name="grupos1" id="grupos1" autocomplete="off" autofocus=""></li>
                 <li><input type="submit" name="agregargrupo" id="agregargrupo" value="Agregar grupo"></li>
             </ul>
               

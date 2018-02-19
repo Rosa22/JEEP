@@ -20,8 +20,8 @@
         <nav>
         <form action="Agregaraula" method="post"> 
             <ul>
-                <li><label>Nombre del aula:<input type="text" name="aula1" id="aula1"></label></li>
-                <li><label>Nombre del edificio:<input type="text" name="edificio1" id="edificio1"></label></li>
+                <li><label>Nombre del aula:<input type="text" name="aula1" id="aula1" autocomplete="off" autofocus></label></li>
+                <li><label>Nombre del edificio:<input type="text" name="edificio1" id="edificio1" autocomplete="off"></label></li>
                 <li><input type="submit" name="agregaraula" id="agregaraula" value="Agregar aula"</li>
             </ul>
                 
